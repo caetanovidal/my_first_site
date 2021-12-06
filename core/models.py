@@ -88,3 +88,17 @@ class Features(Base):
 
     def __str__(self):
         return self.feature
+
+
+class Movel(Base):
+    modelo = models.CharField('nome', max_length=50)
+    imagem = StdImageField('Imagem', upload_to=get_file_path,
+                           variations={'thumb': {'width': 480, 'height': 480, 'crop': True}})
+
+    class Meta():
+        verbose_name = 'Móvel'
+        verbose_name_plural = 'Móveis'
+
+    def __str__(self):
+        return self.nome
+

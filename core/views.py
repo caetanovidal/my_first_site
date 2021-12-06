@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import FormView
-from .models import Servico, Funcionario, Features
+from .models import Servico, Funcionario, Features, Movel
 from .forms import ContatoForm
 from django.urls import reverse_lazy
 from  django.contrib import messages
@@ -17,6 +17,7 @@ class IndexView(FormView):
         context['servicos'] = Servico.objects.all()
         context['funcionarios'] = Funcionario.objects.all()
         context['features'] = Features.objects.all()
+        context['moveis'] = Movel.objects.all()
 
         return context
 
