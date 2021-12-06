@@ -11,9 +11,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os.path
 from pathlib import Path
-
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
 import dj_database_url
+
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -77,7 +76,7 @@ WSGI_APPLICATION = 'fusion.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
+"""DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'fusion',
@@ -86,12 +85,12 @@ DATABASES = {
         'HOST': 'localhost',
         'PORT': '5432'
     }
-}
-
-
-"""DATABASES = {
-    'default': dj_database_url.config()
 }"""
+
+
+DATABASES = {
+    'default': dj_database_url.config()
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -141,7 +140,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Email teste console
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 """
 # Email producao
