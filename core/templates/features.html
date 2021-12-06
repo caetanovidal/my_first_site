@@ -9,20 +9,20 @@
 
           <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
 
-             for f in features|slice:":3"
+            {% for f in features|slice:":3" %}
             <div class="content-left">
               <div class="box-item wow fadeInLeft" data-wow-delay="0.3s">
                 <span class="icon">
-                  <i class="{ f.icone }}"></i>
+                  <i class="{{ f.icone }}"></i>
                 </span>
                 <div class="text">
-                  <h4>{ f.feature }}</h4>
-                  <p>{ f.descricao }}</p>
+                  <h4>{{ f.feature }}</h4>
+                  <p>{{ f.descricao }}</p>
                 </div>
               </div>
             </div>
 
-            { endfor }
+            {% endfor %}
 
 
           </div>
@@ -33,21 +33,21 @@
           </div>
           <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
 
-            { for f in features|slice:"3:6" }
+            {% for f in features|slice:"3:6" %}
 
             <div class="content-right">
               <div class="box-item wow fadeInRight" data-wow-delay="0.3s">
                 <span class="icon">
-                  <i class="{ f.icone }}"></i>
+                  <i class="{{ f.icone }}"></i>
                 </span>
                 <div class="text">
-                  <h4>{ f.feature }}</h4>
-                  <p>{ f.descricao }}</p>
+                  <h4>{{ f.feature }}</h4>
+                  <p>{{ f.descricao }}</p>
                 </div>
               </div>
             </div>
 
-            { endfor }
+            {% endfor %}
 
 
           </div>

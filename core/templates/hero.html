@@ -23,14 +23,14 @@
 
     <div class="container">
 
-       { if messages %}
-        { for m in messages }
+       {% if messages %}
+        {% for m in messages %}
           <div class="alert alert-{{ m.tags }}">
             <button type="button" class="close" data-dismiss="alert"></button>
-            <strong>{ m }}</strong>
+            <strong>{{ m }}</strong>
           </div>
-        { endfor }
-      { endif }
+        {% endfor %}
+      {% endif %}
     </div>
 </header>
 <!-- Header Area wrapper End -->
