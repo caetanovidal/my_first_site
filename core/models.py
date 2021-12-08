@@ -100,5 +100,13 @@ class Movel(Base):
         verbose_name_plural = 'Móveis'
 
     def __str__(self):
-        return self.nome
+        return self.modelo
 
+
+class FotoProduto(Base):
+    descricao = models.CharField('Descrição', max_length=250)
+    imagem = StdImageField('Imagem', upload_to=get_file_path)
+
+    class Meta():
+        verbose_name = 'Foto produto'
+        verbose_name_plural = 'Fotos produtos'

@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import FormView
-from .models import Servico, Funcionario, Features, Movel
+from .models import Servico, Funcionario, Features, Movel, FotoProduto
 from .forms import ContatoForm
 from django.urls import reverse_lazy
 from  django.contrib import messages
@@ -18,6 +18,7 @@ class IndexView(FormView):
         context['funcionarios'] = Funcionario.objects.all()
         context['features'] = Features.objects.all()
         context['moveis'] = Movel.objects.all()
+        context['fotos_produtos'] = FotoProduto.objects.all()
 
         return context
 
@@ -29,6 +30,8 @@ class IndexView(FormView):
     def form_invalid(self, form, *args, **kwargs):
         messages.error(self.request, 'Erro ao enviar o e-mail')
         return super(IndexView, self).form_invalid(form, *args, **kwargs)
+
+
 
 
 
