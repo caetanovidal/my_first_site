@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import FormView
+from django.views.generic import FormView, TemplateView
 from .models import Servico, Funcionario, Features, Movel, FotoProduto
 from .forms import ContatoForm
 from django.urls import reverse_lazy
@@ -31,6 +31,9 @@ class IndexView(FormView):
         messages.error(self.request, 'Erro ao enviar o e-mail')
         return super(IndexView, self).form_invalid(form, *args, **kwargs)
 
+
+class MoveisView(TemplateView):
+    template_name = 'moveis.html'
 
 
 

@@ -1,32 +1,6 @@
+{% extends 'base_moveis.html' %}
+
 {% load static %}
-<section id="services" class="section-padding">
-      <div class="container">
-        <div class="section-header text-center">
-          <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s">Nossos serviços</h2>
-          <div class="shape wow fadeInDown" data-wow-delay="0.3s"></div>
-        </div>
-        <div class="row">
 
-          {% for m in moveis %}
+{% include 'clientes.html' %}
 
-          <div class="col-lg-6 col-md-12 col-xs-12">
-            <!-- Team Item Starts -->
-            <div class="team-item wow fadeInRight" data-wow-delay="0.2s">
-              <div class="team-img">
-                <img class="img-fluid" src="{{ m.imagem.thumb.url }}" alt="{{ f.nome }}">
-              </div>
-              <div class="contetn">
-                <div class="info-text">
-                  <h3><a href="#">{{ m.modelo }}</a></h3>
-                  <p>{{ f.cargo }}</p>
-                </div>
-                <p>{{ f.bio }}</p>
-              </div>
-            </div>
-            <!-- Team Item Ends -->
-          </div>
-
-        {% endfor %}
-        </div>
-      </div>
-    </section>
