@@ -1,6 +1,46 @@
 {% extends 'base_moveis.html' %}
-
 {% load static %}
+{% block content %}
+      <!-- Navbar End -->
 
-{% include 'clientes.html' %}
+      <!-- Hero Area Start -->
+          {% include 'hero_moveis.html' %}
+      <!-- Hero Area End -->
 
+    <!-- Services Section Start -->
+      {% include 'servicos_moveis.html' %}
+    <!-- Services Section End -->
+
+    <!-- About Section start -->
+        {% include 'sobre_moveis.html' %}
+    <!-- About Section End -->
+
+    <!-- Features Section Start -->
+        {% include 'features_moveis.html' %}
+    <!-- Features Section End -->
+
+    <!-- Team Section Start -->
+        {% include 'equipe_moveis.html' %}
+    <!-- Team Section End -->
+        {% include 'precos_moveis.html' %}
+    <!-- Pricing section Start -->
+
+    <!-- Pricing Table Section End -->
+
+    <!-- Testimonial Section Start -->
+        {% include 'clientes_moveis.html' %}
+    <!-- Testimonial Section End -->
+
+    <!-- Call To Action Section Start -->
+        {% include 'chamada_moveis.html' %}
+    <!-- Call To Action Section Start -->
+
+    <!-- Contact Section Start -->
+        {% include 'contato_moveis.html' %}
+    <!-- Contact Section End -->
+
+    <!-- Footer Section Start -->
+        {% include 'footer_moveis.html' %}
+    <!-- Footer Section End -->
+
+{% endblock %}

@@ -35,6 +35,16 @@ class IndexView(FormView):
 class MoveisView(TemplateView):
     template_name = 'moveis.html'
 
+    def get_context_data(self, **kwargs):
+        context = super(MoveisView, self).get_context_data(**kwargs)
+        context['servicos'] = Servico.objects.all()
+        context['funcionarios'] = Funcionario.objects.all()
+        context['features'] = Features.objects.all()
+        context['moveis'] = Movel.objects.all()
+        context['fotos_produtos'] = FotoProduto.objects.all()
+
+        return context
+
 
 
 
