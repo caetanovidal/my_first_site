@@ -747,7 +747,7 @@ hr {
 3. Hero Area
 ========================================================================== */
 #hero-area {
-  background-image: url(../img/hero-area.svg);
+  background-image: url(../img/hero-area-geteins.png);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -758,7 +758,7 @@ hr {
 }
 
 #hero-area .contents .head-title {
-  color: #222222;
+  color: black;
   font-size: 42px;
   font-weight: 700;
   line-height: 60px;
@@ -767,7 +767,7 @@ hr {
 
 #hero-area .contents .header-button {
   margin-top: 20px;
-  color: #222222;
+  color: #6495ED;
 }
 
 #hero-area .contents .header-button .btn {
@@ -1009,7 +1009,7 @@ hr {
 
 .testimonial {
   position: relative;
-  background-color: #6495ED;
+  background-color: #0396A6;
 }
 
 .testimonial-item {
